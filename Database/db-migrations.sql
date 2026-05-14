@@ -54,12 +54,16 @@ INSERT INTO Dealers (Name, Username, PasswordHash) VALUES
 ('City Motors', 'citymotors', 'password1'),
 ('Premium Autos', 'premiumautos', 'password2');
 
-INSERT INTO Cars (DealerId, Make, Model, Year, Stock) VALUES
-(1, 'Audi', 'A4', 2018, 5),
-(1, 'Toyota', 'Corolla', 2020, 10),
-(1, 'BMW', '320i', 2019, 3);
+INSERT INTO Cars (DealerId, Make, Model, Year, Price, Stock) VALUES
+(1, 'Toyota', 'Camry', 2020, 24000, 10),
+(1, 'Honda', 'Civic', 2019, 20000, 8),
+(1, 'Ford', 'Mustang', 2021, 35000, 5),
+(1, 'Chevrolet', 'Malibu', 2018, 18000, 12),
+(1, 'Nissan', 'Altima', 2022, 26000, 7);
 
-INSERT INTO Cars (DealerId, Make, Model, Year, Stock) VALUES
-(2, 'Mercedes-Benz', 'C200', 2021, 4),
-(2, 'Tesla', 'Model 3', 2022, 6),
-(2, 'Honda', 'Civic', 2017, 8);
+INSERT INTO Cars (DealerId, Make, Model, Year, Price, Stock) VALUES
+(2, 'BMW', '3 Series', 2021, 41000, 4),
+(2, 'Audi', 'A4', 2020, 39000, 6),
+(2, 'Mercedes', 'C-Class', 2019, 42000, 3),
+(2, 'Volkswagen', 'Passat', 2022, 28000, 9),
+(2, 'Kia', 'Optima', 2021, 23000, 10);

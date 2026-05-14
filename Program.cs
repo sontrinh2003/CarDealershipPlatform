@@ -66,7 +66,7 @@ app.UseSwaggerGen();
 using (var conn = new SqliteConnection(builder.Configuration.GetConnectionString("DefaultConnection")))
 {
     conn.Open();
-    var migrationSql = File.ReadAllText("db-migrations.sql");
+    var migrationSql = File.ReadAllText("Database/db-migrations.sql");
     await conn.ExecuteAsync(migrationSql);
 }
 
