@@ -44,6 +44,7 @@ builder.Services.AddScoped<DealerRepository>();
 builder.Services.AddScoped<CustomerRepository>();
 builder.Services.AddScoped<SalesRepository>();
 builder.Services.AddScoped<DashboardRepository>();
+builder.Services.AddScoped<AnalyticsRepository>();
 
 builder.Services.AddCors(options =>
 {

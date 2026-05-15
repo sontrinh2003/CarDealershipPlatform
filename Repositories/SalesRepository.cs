@@ -78,5 +78,14 @@ namespace CarStockAPI.Repositories
                 throw;
             }
         }
+
+        public async Task<bool> UpdateStatus(int id, int dealerId, string status)
+        {
+            using var conn = GetConnection();
+            var rows = await conn.ExecuteAsync(
+                "UPDATE Sales SET Status = @Status WHERE Id = @Id AND DealerId = @DealerId",
+                new { Status = status, Id = id, DealerId = dealerId });
+            return rows > 0;
+        }
     }
 }
