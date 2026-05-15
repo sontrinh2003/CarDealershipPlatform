@@ -49,5 +49,16 @@ namespace CarStockAPI.Repositories
                 "DELETE FROM Customers WHERE Id = @Id AND DealerId = @DealerId",
                 new { Id = id, DealerId = dealerId });
         }
+
+        public async Task<bool> Update(int id, int dealerId, string name, string email, string phone)
+        {
+            using var conn = GetConnection();
+            var rows = await conn.ExecuteAsync(@"
+                UPDATE Customers
+                SET Name = @Name, Email = @Email, Phone = @Phone
+                WHERE Id = @Id AND DealerId = @DealerId",
+                new { Id = id, DealerId = dealerId, Name = name, Email = email, Phone = phone });
+            return rows > 0;
+        }
     }
 }
