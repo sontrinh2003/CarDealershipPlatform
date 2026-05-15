@@ -366,11 +366,11 @@ function Sidebar({ page, setPage }) {
             onClick={() => setPage(n.id)}
             style={{
               display: "flex", alignItems: "center", gap: 10, width: "100%",
-              padding: "9px 12px", borderRadius: "var(--radius)", background: "none",
+              padding: "9px 12px", borderRadius: "var(--radius)",
+              background: page === n.id ? "var(--surface2)" : "transparent",
               color: page === n.id ? "var(--text)" : "var(--muted)",
               fontFamily: "var(--sans)", fontSize: 13, fontWeight: page === n.id ? 600 : 400,
               border: "none", cursor: "pointer", marginBottom: 2,
-              background: page === n.id ? "var(--surface2)" : "transparent",
               transition: "background 0.15s, color 0.15s",
               textAlign: "left",
             }}
